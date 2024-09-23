@@ -1,0 +1,4 @@
+#rust
+backend/target
+backend/log/ftp.log
+.idea

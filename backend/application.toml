@@ -1,0 +1,39 @@
+[application]
+version = "0.0.1"
+max_concurrent_users = 25 # How many users can use the Honeypot at the same time
+
+[database]
+url = "localhost:3306"
+username = "root"
+password = "root"
+context = "mysql"
+database_name = "ftp_db"
+
+[virustotal]
+token = ""
+hash_url = "https://www.virustotal.com/api/v3/files/"
+result_url = "https://www.virustotal.com/gui/file"
+
+[login]
+number_of_tries_before_success = 7 #How many tries an attacker need before he will be logged in
+
+[queue]
+interval = 15 #duration in minutes, interval for the queue
+
+[file_management]
+can_be_downloaded = false #if set to false the returned files will be randomly generated with the same size
+file_upload_real = true #if files are reallly saved
+file_upload_limit = 10 # How many files a user is allowed to upload
+file_size_limit_in_gb = 10 # If the limit is reached, an Attacker can not upload any more files
+# IMPORTANT: No trailing slash!
+base_save_path = "/tmp/ftp_test" # Files will be saved in this dir, new sub directories are created for each user
+
+[ftp]
+welcome_message = "FTP Server"
+help_message = "Help:\nPowered by libunftp"
+ftp_port = 8081
+
+[honeynet]
+url = ""
+token = ""
+id = 1

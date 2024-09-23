@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  db_ftp:
+    container_name: mysql-ftp
+    image: mysql:8.0
+    restart: unless-stopped # TODO: switch back to always when we go live!
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ftp_db
+    ports:
+      - "3306:3306"

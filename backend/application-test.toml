@@ -1,0 +1,37 @@
+[application]
+version = "0.0.0-testing"
+max_concurrent_users = 10
+[database]
+url = "localhost:1234"
+username = "testUsername"
+password = "testPW"
+context = "mysql"
+database_name = "ftp_db"
+
+[virustotal]
+token = "test-token"
+hash_url = "test_url_hash"
+result_url = "test_url_result"
+[login]
+number_of_tries_before_success = 2
+
+[queue]
+interval = 1
+
+[file_management]
+file_upload_real = true
+can_be_downloaded = true
+
+file_upload_limit = 5
+file_size_limit_in_gb = 5
+base_save_path = "/test/path"
+
+[ftp]
+welcome_message = "welcome_msg"
+help_message = "help_msg"
+ftp_port = 1111
+
+[honeynet]
+url = "honey_url"
+token = "honey_token"
+id = 2222
